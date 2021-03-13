@@ -12,38 +12,34 @@ module top;
   logic clk;
   logic test_clk;
 
-  // interconnecting signals
-  logic          load_en;
-  logic          reset_n;
-  opcode_t       opcode;
-  operand_t      operand_a, operand_b;
-  address_t      write_pointer, read_pointer;
-  instruction_t  instruction_word;
+  tb_ifc tbifc(
+    .clk(clk)
+    );
 
   // instantiate testbench and connect ports
   instr_register_test test (
     .clk(test_clk),
-    .load_en(load_en),
-    .reset_n(reset_n),
-    .operand_a(operand_a),
-    .operand_b(operand_b),
-    .opcode(opcode),
-    .write_pointer(write_pointer),
-    .read_pointer(read_pointer),
-    .instruction_word(instruction_word)
+    .load_en(tbifc.load_en),
+    .reset_n(tbifc.reset_n),
+    .operand_a(tbifc.operand_a),
+    .operand_b(tbifc.operand_b),
+    .opcode(tbifc.opcode),
+    .write_pointer(tbifc.write_pointer),
+    .read_pointer(tbifc.read_pointer),
+    .instruction_word(tbifc.instruction_word)
    );
 
   // instantiate design and connect ports
   instr_register dut (
     .clk(clk),
-    .load_en(load_en),
-    .reset_n(reset_n),
-    .operand_a(operand_a),
-    .operand_b(operand_b),
-    .opcode(opcode),
-    .write_pointer(write_pointer),
-    .read_pointer(read_pointer),
-    .instruction_word(instruction_word)
+    .load_en(tbifc.load_en),
+    .reset_n(tbifc.reset_n),
+    .operand_a(tbifc.operand_a),
+    .operand_b(tbifc.operand_b),
+    .opcode(tbifc.opcode),
+    .write_pointer(tbifc.write_pointer),
+    .read_pointer(tbifc.read_pointer),
+    .instruction_word(tbifc.instruction_word)
    );
 
   // clock oscillators
