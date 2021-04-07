@@ -15,7 +15,7 @@
 # do run.do
 # 1
 # Model Technology ModelSim SE-64 vlog 10.6d Compiler 2018.02 Feb 24 2018
-# Start time: 17:27:21 on Mar 31,2021
+# Start time: 17:01:06 on Apr 07,2021
 # vlog -reportprogress 300 -sv -timescale 1ps/1ps -work work -f sources.txt 
 # -- Compiling package instr_register_pkg
 # -- Compiling module instr_register
@@ -26,10 +26,10 @@
 # 
 # Top level modules:
 # 	top
-# End time: 17:27:22 on Mar 31,2021, Elapsed time: 0:00:01
+# End time: 17:01:07 on Apr 07,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vsim -novopt -quiet -nocoverage "+notimingchecks" "+nowarnTSCALE" -sva top 
-# Start time: 17:27:22 on Mar 31,2021
+# Start time: 17:01:07 on Apr 07,2021
 # ** Warning: (vsim-8891) All optimizations are turned off because the -novopt switch is in effect. This will cause your simulation to run very slowly. If you are using this switch to preserve visibility for Debug or PLI features please see the User's Manual section on Preserving Object Visibility with vopt.
 # Refreshing C:/Users/gcata/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/catalingheorghe/tsc_lab/lab5/sim/work.top
 # Refreshing C:/Users/gcata/AppData/Local/Packages/CanonicalGroupLimited.Ubuntu18.04onWindows_79rhkp1fndgsc/LocalState/rootfs/home/catalingheorghe/tsc_lab/lab5/sim/work.instr_register_pkg
@@ -72,12 +72,12 @@
 #   operand_a = -15
 #   operand_b = 8
 # 
-# ** Note: $finish    : ../classes/instr_register_test.sv(120)
+# ** Note: $finish    : ../classes/instr_register_test.sv(116)
 #    Time: 165 ns  Iteration: 2  Instance: /top/test
 # 1
-# Break in Module instr_register_test at ../classes/instr_register_test.sv line 120
+# Break in Module instr_register_test at ../classes/instr_register_test.sv line 116
 # Simulation Breakpoint: 1
-# Break in Module instr_register_test at ../classes/instr_register_test.sv line 120
+# Break in Module instr_register_test at ../classes/instr_register_test.sv line 116
 # MACRO ./run.do PAUSED at line 45
-# End time: 17:27:59 on Mar 31,2021, Elapsed time: 0:00:37
+# End time: 17:21:02 on Apr 07,2021, Elapsed time: 0:19:55
 # Errors: 0, Warnings: 1
